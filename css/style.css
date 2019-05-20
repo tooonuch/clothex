@@ -1,0 +1,194 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+	outline:none;
+	list-style: none;
+	scroll-behavior:smooth;
+	text-decoration:none;
+	
+}
+
+::-webkit-scrollbar{
+	width: 4px;
+}
+::-webkit-scrollbar-track{
+	background: rgb(94, 94, 94);
+	}
+	::-webkit-scrollbar-thumb{
+		background: #000000;
+		border-radius: 10px;
+	}
+/*index.html*/
+
+#myVideo{
+z-index: -1;
+position: absolute;
+width: 100%;
+}
+
+.container{
+	width:80%;
+	margin:auto;
+}
+a{
+color:#fff;
+transition: ease-in-out 0.5s;
+}
+
+#presentation{
+	width: 80%;
+	margin: auto;
+	margin-top: 100vh;
+
+}
+
+#presentation p{
+	font-size: 22px;
+	padding-top: 5%;
+}
+
+.topSection, .botSection{
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	}
+
+
+.swiper-container {
+    width: 80%;
+	height: auto;
+	
+}
+@media screen and (max-width: 640px){
+	.swiper-container{
+		width: 100%;
+		height: auto;
+	}
+	.button{
+		margin-top: 0px;
+	}
+}
+
+
+.swiper-slide{
+	text-align: center;
+}
+
+.swiper-button-next {
+	background-image: url(../images/Union4.png) !important;
+	margin-top: -150px !important;
+	
+}
+
+.swiper-button-prev{
+	background-image: url(../images/Union5.png) !important;
+	margin-top: -150px !important;
+}
+.indexCarussel{
+	margin-top:100px;
+}
+
+
+.nav1{
+	display:flex;
+	justify-content: space-between;
+	padding: 5%;
+	transform:translate(0%,60%)
+}
+
+.button{
+	background:#000;
+	color:#fff;
+	border-radius:100px;
+	padding:20px;
+	font-size:35px;
+	width:380px;
+	text-align:center;
+	cursor:pointer;
+	margin:auto;
+	margin-bottom:60px;
+	
+	border: 3px solid #000;
+	transition: all ease-in-out 0.3s;
+
+}
+
+.button:hover{
+	color:#000;
+	background:#fff;
+	border: 3px solid #000;
+
+}
+
+@media screen and (max-width: 640px){
+	.button{
+		margin-top: 50px;
+	}
+}
+.footerContainer{
+	width:100%;
+	background:#E2E2E2;
+	padding-top:90px;
+
+}
+
+.mainFooter{
+	margin-top:90px;
+	background:#000;
+	color:#fff;
+	display:flex;
+	align-items:center;
+	justify-content:space-evenly;
+	height:540px;
+	
+}
+.followUsButtons{
+	display:flex;
+	align-items:center;
+	justify-content:space-evenly;
+	padding-top: 40px;
+	
+}
+.followUsButtons div:hover{
+	transition: ease-in-out 0.5s;
+	opacity:0.8;
+	transform:scale(1.02);
+
+}
+.followUsButtons a{
+	padding:20px;
+}
+
+.followUsText{
+	font-size:47px;
+	font-weight: 500;
+	text-align:center;
+
+}
+.footerBranding{
+	font-size: 18px;
+
+}
+
+.footerNav{
+	font-size: 24px;
+
+}
+.footerNav li{
+	padding:20px;
+}
+
+.footerNav li hr{
+	opacity:0;
+	border: 2px white solid;
+	border-radius:10px;
+	transition: all ease-in-out 0.3s;
+}
+.footerNav li:hover hr{
+	opacity:1;
+	transition: all ease-in-out 0.3s;
+}
+
+
+/*end of index.html*/
