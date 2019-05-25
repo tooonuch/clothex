@@ -8,6 +8,11 @@
 	text-decoration:none;
 	
 }
+#tech img{
+	max-width: 100%;
+	/*filter: contrast(1.5) grayscale(1);*/
+	
+}
 
 ::-webkit-scrollbar{
 	width: 4px;
@@ -192,3 +197,175 @@ transition: ease-in-out 0.5s;
 
 
 /*end of index.html*/
+
+/*tech.html*/
+#tech .logo, #tech .menu-btn{
+	filter: invert(1) !important;
+}
+
+.techPres{
+	background-image: url(/images/tech_headbanner.jpg);
+	height: 100vh;
+	width: 100%;
+	margin-top: -128px;
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-position:center;
+}
+.techPres .techHeadText{
+	padding-top: 10%;
+	padding-left: 5%;
+	font-size: 7em;
+	font-weight: 600;
+	color:white;
+}
+
+.techPres .techBotText{
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+	border-radius: 20px;
+	float: right;
+	width: 40em;
+	color: white;
+	font-size: 1.5em;
+	margin-top: 10%;
+	padding: 2%;
+	
+}
+
+.techFlexContainer{
+	width: 80%;
+	margin: auto;
+	margin-top: 5em;
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.elAnimation img{
+	border-radius: 20px;
+	-webkit-box-shadow: 12px 12px 24px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 12px 12px 24px 0px rgba(0,0,0,0.2);
+	box-shadow: 12px 12px 24px 0px rgba(0,0,0,0.2);
+	
+}
+.elHeader{
+	margin-top:2em;
+	
+}
+.elHeader h1{
+	font-size: 7em !important;
+}
+.elHeader h3{
+	font-size: 3em !important;
+	font-weight: 500;
+}
+.techHeatingEl p{
+	margin: auto;
+	margin-top: 2.5em;
+	font-size: 1.5em;
+	width: 80%;
+}
+.battery{
+	margin: auto;
+	margin-top: 5em; 
+	width: 100%;
+}
+.battery p{
+	margin: auto;
+	margin-top: 2.5em;
+	font-size: 1.5em;
+	width: 80%;
+}
+
+.materials p{
+	margin: auto;
+	margin-top: 2.5em;
+	font-size: 1.5em;
+	width: 80%;
+}
+.connected img{
+	margin-top:5em;
+	object-fit: cover;
+	width: 100%;
+	height: 600px;
+}
+.appPres{
+	display: flex;
+	justify-content:center;
+}
+.appPres img{
+	width: 70%;
+	height: 70%;
+	
+}
+.elConnection .elHeader{
+	width: 80%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align:center;
+}
+.elConnection p{
+	width: 80%;
+	margin: auto;
+	font-size: 1.5em;
+	margin-bottom: -40px;
+}
+
+.safetyPres .safetyHeader{
+	font-size: 7em;
+	font-weight: 700;
+	text-align: center;
+}
+
+.safetyPres .safetyFlexContainer1, .safetyFlexContainer2{
+	display: flex;
+	justify-content: space-around;
+	margin: auto;
+	margin-top: 4em;
+	width: 80%;
+}
+
+.safetyPres h1{
+	font-size: 3em;
+	padding: 2em;
+	font-weight: 600;
+}
+.safetyPres img{
+	border-radius: 20px;
+	-webkit-box-shadow: 12px 12px 24px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 12px 12px 24px 0px rgba(0,0,0,0.2);
+	box-shadow: 12px 12px 24px 0px rgba(0,0,0,0.2);
+
+}
+
+.manualControls{
+	margin-top: 6em;
+	margin-bottom: 12em;
+}
+.manualControls .controlHeader{
+	font-size: 4em;
+	font-weight: 600;
+	text-align: center;
+}
+.manualControls p{
+	margin: auto;
+	margin-top: 2.5em;
+	font-size: 1.5em;
+	width: 80%;
+	padding-right: 2em;
+}
+.controlsFlexContainer, .controlHeader{
+	width: 80%;
+	margin: auto;
+	margin-top: 2.5em;
+	display: flex;
+}
+.manualControls img{
+	border-radius: 20px;
+	-webkit-box-shadow: 12px 12px 24px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 12px 12px 24px 0px rgba(0,0,0,0.2);
+	box-shadow: 12px 12px 24px 0px rgba(0,0,0,0.2);
+
+}
+/*end of tech.html*/
