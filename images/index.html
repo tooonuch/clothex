@@ -1,0 +1,239 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+    <title> CLOTHEX|Smart Clothing Brand  </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</head>   
+
+
+
+<body id="index">
+    
+
+      <section class="indexIntro">
+            <div class="intro">
+                <div class="introVideo">
+                    <video autoplay muted loop id="myVideo">
+                        <source src="images/homepage_video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="introTextOverlay">
+
+                </div>
+            </div>
+ 
+    </section>
+    <header id="underlay">
+            <img src="images/Group4.png" class="logo invert" />
+            <img src="images/menu.svg" class="menu-btn invert" id="open-menu">
+        </header>
+
+<script>
+    $(document).ready(function(){
+        var overlay = document.getElementById("overlay");
+        var closeMenu = document.getElementById("close-menu");
+    
+    
+        document.getElementById("open-menu").addEventListener("click", function(){
+            overlay.classList.add("show-menu");
+            });
+            document.getElementById("close-menu").addEventListener("click", function(){
+            overlay.classList.remove("show-menu");
+            });
+
+            
+        $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if(scroll>100){
+            $("#underlay").css("background", "black");
+            $(".invert").css("filter", "invert(100%)");
+        }
+        else{
+            $("#underlay").css("background", "transparent");
+            $(".invert").css("filter", "invert(0%)");
+        }
+    });
+
+    });
+</script>
+
+    <nav id="overlay">
+            <img src="./images/close.svg" class="close-btn" id="close-menu">
+            
+            <ul>
+                <li>
+                    <a href="index.html">home</a>
+                    <span> main page </span>
+                </li>
+                <li>
+                    <a href="all.html">all products</a>
+                    <span> see our other stuff </span>
+                </li>
+                <li>
+                    <a href="tech.html">technology</a>
+                    <span> how we make it work </span>
+                </li>
+                <li>
+                    <a href="about.html">about us</a>
+                    <span> who we are</span>
+                </li>
+                <li>
+                    <a href="contact.html">contact us</a>
+                    <span> get in touch </span>
+                </li>
+
+
+            </ul>
+
+
+
+        </nav>
+
+
+
+    <section id="presentation">
+       <div class="presContainer">
+            <div class="topSection">
+                <div class="leftBox">
+                    <h1 style="color:black; font-size:6em; text-align: right; padding-right: 0px; padding-top: 20px;">Rule the </h1>
+                    <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                </div>
+                <div class="rightBox">
+                    <h1 style="color:white; font-size:6em; position: absolute; padding-left: 20px; padding-top: 20px;"> City </h1>
+                    <img src="images/city_1.png">
+                </div>
+            </div>
+            <div class="botSection">
+                <div class="leftBox">
+                        <h1 style="color:white; font-size:6em; text-align: right; padding-left:220px; padding-top: 15px; position: absolute;"> No matter  </h1>
+                        <img src="images/city_2.png">
+                         </div>
+                    <div class="rightBox">
+                            <h1 style="color:black; font-size:6em; padding-top: 20px;">the Weather</h1>
+                            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+      
+                    </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+<script>
+    $(document).ready(function () {
+    
+        var mySwiper = new Swiper ('.swiper-container', {
+            slidesPerView: 3,
+            direction: 'horizontal',
+            loop: true,
+            spaceBetween: 40,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        }
+      }
+
+
+  })
+  });
+    </script>    
+     
+    
+ <section class="indexCarussel">
+        
+        <div class="swiper-container">
+           
+            <div class="swiper-wrapper">
+           
+                <div class="swiper-slide"><img src="./images/slider/10.png" style="width:100%; height:auto; "/></div>
+                <div class="swiper-slide"><img src="./images/slider/1.png" style="width:100%; height:auto; "/></div>
+                <div class="swiper-slide"><img src="./images/slider/2.png" style="width:100%; height:auto; "/></div>
+                <div class="swiper-slide"><img src="./images/slider/3.png" style="width:100%; height:auto; "/></div>
+                <div class="swiper-slide"><img src="./images/slider/4.png" style="width:100%; height:auto; "/></div>
+                <div class="swiper-slide"><img src="./images/slider/5.png" style="width:100%; height:auto; "/></div>
+                <div class="swiper-slide"><img src="./images/slider/6.png" style="width:100%; height:auto; "/></div>
+                <div class="swiper-slide"><img src="./images/slider/7.png" style="width:100%; height:auto; "/></div>
+                <div class="swiper-slide"><img src="./images/slider/8.png" style="width:100%; height:auto; "/></div>
+                <div class="swiper-slide"><img src="./images/slider/9.png" style="width:100%; height:auto; "/></div>
+
+                
+            </div>
+
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+         
+
+        <div class="button">
+            Where to buy
+        </div>
+
+ </section>
+
+
+    </div>
+
+    <section class="footerContainer">
+        <footer class="mainFooter">
+            <div class="footerBranding"><img src="images/CLOTHEX.png" /> <br /> The exciting future of clothing</div>
+            <div class="footerNav">
+                <ul>
+                    <li> <a href="index.html"> home</a> <hr /></li>
+                    <li><a href="index.html">all products</a> <hr /></li>
+                    <li><a href="index.html">technology</a><hr /></li>
+                    <li><a href="index.html">about us</a><hr /></li>
+                    <li><a href="index.html">contact</a><hr /></li>
+                </ul>
+            </div>
+            <div class="footerFollowUs">
+                <div class="followUsText">Follow us on social media</div>
+                <div class="followUsButtons">
+                    <div class="followUsTwitter"><a href="twitter.com"><img src="images/twitter.png" /></a></div>
+                    <div class="followUsInsta"><a href="instagram.com"><img src="images/insta.png" /></a></div>
+                    <div class="followUsYoutube"><a href="youtube.com"><img src="images/youtube.png" /></a></div>
+                    <div class="followUsFacebook"><a href="facebook.com"><img src="images/facebook.png" /></a></div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+        <!--megamenu-->
+
+        
+
+
+
+</body>
+</html>
