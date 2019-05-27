@@ -1,198 +1,316 @@
 <!DOCTYPE html>
 <html>
-    <head>
-
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="css/style.css" rel="stylesheet">
-        <link href="main.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-        <title> Technology|CLOTHEX  </title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    </head>   
-<body id="tech">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+    />
+    <title>Technology|CLOTHEX</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  </head>
+  <body id="tech">
     <header id="underlay">
-        <img src="images/Group4.png" class="logo invert" />
-        <img src="images/menu.svg" class="menu-btn invert" id="open-menu">
+      <img src="images/Group4.png" class="logo invert" />
+      <img src="images/menu.svg" class="menu-btn invert" id="open-menu" />
     </header>
 
-<script>
-$(document).ready(function(){
-    var overlay = document.getElementById("overlay");
-    var closeMenu = document.getElementById("close-menu");
+    <script>
+      $(document).ready(function() {
+        var overlay = document.getElementById("overlay");
+        var closeMenu = document.getElementById("close-menu");
 
+        document
+          .getElementById("open-menu")
+          .addEventListener("click", function() {
+            overlay.classList.add("show-menu");
+          });
+        document
+          .getElementById("close-menu")
+          .addEventListener("click", function() {
+            overlay.classList.remove("show-menu");
+          });
 
-    document.getElementById("open-menu").addEventListener("click", function(){
-        overlay.classList.add("show-menu");
+        $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
+          if (scroll > 100) {
+            $("#underlay").css("background", "black");
+            $(".invert").css("filter", "invert(100%)");
+          } else {
+            $("#underlay").css("background", "transparent");
+            $(".invert").css("filter", "invert(0%)");
+          }
         });
-        document.getElementById("close-menu").addEventListener("click", function(){
-        overlay.classList.remove("show-menu");
-        });
+      });
+    </script>
 
-        
-    $(window).scroll(function(){
-    var scroll = $(window).scrollTop();
-    if(scroll>100){
-        $("#underlay").css("background", "black");
-        $(".invert").css("filter", "invert(100%)");
-    }
-    else{
-        $("#underlay").css("background", "transparent");
-        $(".invert").css("filter", "invert(0%)");
-    }
-});
+    <nav id="overlay">
+      <img src="./images/close.svg" class="close-btn" id="close-menu" />
 
-});
-</script>
-
-<nav id="overlay">
-        <img src="./images/close.svg" class="close-btn" id="close-menu">
-        
-        <ul>
-            <li>
-                <a href="index.html">home</a>
-                <span> main page </span>
-            </li>
-            <li>
-                <a href="all.html">all products</a>
-                <span> see our other stuff </span>
-            </li>
-            <li>
-                <a href="tech.html">technology</a>
-                <span> how we make it work </span>
-            </li>
-            <li>
-                <a href="about.html">about us</a>
-                <span> who we are</span>
-            </li>
-            <li>
-                <a href="contact.html">contact us</a>
-                <span> get in touch </span>
-            </li>
-
-
-        </ul>
-
-
-
+      <ul>
+        <li>
+          <a href="index.html">home</a>
+          <span> main page </span>
+        </li>
+        <li>
+          <a href="all.html">all products</a>
+          <span> see our other stuff </span>
+        </li>
+        <li>
+          <a href="tech.html">technology</a>
+          <span> how we make it work </span>
+        </li>
+        <li>
+          <a href="about.html">about us</a>
+          <span> who we are</span>
+        </li>
+        <li>
+          <a href="contact.html">contact us</a>
+          <span> get in touch </span>
+        </li>
+      </ul>
     </nav>
 
-<!-- Main part of technology-->
+    <!-- Main part of technology-->
 
-<section class="techPres">
-    <div class="techHeadText">Innovation in it's core</div>
-    <div class="techBotText"><p> Lorem ipsum dolor sit aadipisicing elit. Molestias voluptate culpa dicta quod odio quas! Dolorem odit quidem in explicabo quae voluptatibus, perspiciatis consectetur? Neque vel repellat maiores distinctio est. >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum laboriosam, corporis minus animi soluta debitis, omnis natus quaerat dignissimos quasi harum maiores labore totam repellendus sunt sint modi facere! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit at ratione dolor nihil cum, nesciunt consequuntur officiis exercitationem facilis vel provident voluptatem, eos similique nemo placeat ipsam, tempora hic neque!</p> </div>
-
-</section>
-
-
-<section class="techHeatingEl">
-    <div class="techFlexContainer">
-        <div class="elAnimation"> <img src="./images/insulation_placeholder.jpg"></div>
-        <div class="elHeader"> <h1>Heading big</h1> <br/> <h3> Heading small</h3></div>
-    </div>
-    <p> Veniam incididunt magna aliqua excepteur eiusmod ad eiusmod in. Qui in commodo do duis do veniam reprehenderit nulla Lorem dolore voluptate sit. Nulla ut culpa ipsum velit culpa culpa aliquip consequat cillum laboris. In proident veniam deserunt ad laboris consectetur est sit magna aliqua ex laborum. Fugiat sunt laborum ex nisi aliquip duis qui magna sint et. Pariatur eiusmod adipisicing irure elit aliqua id proident ex proident et.
-
-Esse non minim occaecat ex consequat cillum amet ipsum laboris officia. Ut pariatur sit eiusmod deserunt sint id quis laborum nulla reprehenderit dolore elit dolor. Cupidatat nostrud esse consequat amet duis fugiat ipsum dolor laborum irure laborum dolore officia dolor. Commodo et adipisicing pariatur ad. Magna cupidatat eu consectetur excepteur sint cupidatat consequat veniam nisi fugiat. Sint ea ut exercitation ullamco deserunt minim sunt. </p>
-</section>
-
-
-<section class="battery">
-    <div class="bannerFW"> <img src="./images/powerbanner.jpg"</div>
-    <p> Sunt sint incididunt velit sunt sit duis. Minim in elit minim dolore nisi labore nisi elit. Ut occaecat veniam mollit non Lorem fugiat consectetur ullamco quis ullamco incididunt veniam non. Veniam ut officia officia fugiat deserunt irure veniam aliqua irure proident eu irure et. Officia non dolor tempor laboris et nisi ipsum enim ullamco minim tempor occaecat esse officia. Magna occaecat irure deserunt sunt cupidatat qui cupidatat est qui velit commodo. Magna proident laboris voluptate amet et duis incididunt officia nulla veniam aliqua aute laboris ex.
-
-    Quis veniam reprehenderit culpa irure dolor magna tempor deserunt ut sunt. Qui elit voluptate aliquip enim cupidatat nisi dolore excepteur nostrud. Ea minim commodo eiusmod aliquip id excepteur adipisicing. Adipisicing non nisi et culpa exercitation irure irure aute ad. Tempor et sit id dolor consectetur labore occaecat excepteur. Anim mollit irure qui aliqua quis non. Dolore ad labore irure elit incididunt tempor laboris eiusmod adipisicing irure sint.</p>
-
-
-</section>
-
-
-<section class="materials"> 
-    <div class="techFlexContainer">
-    <div class="elHeader"> <h1>Heading big</h1> <br/> <h3> Heading small</h3></div>
-    <div class="elAnimation"> <img src="./images/fabric_placeholder.jpg"></div>
-    </div>    
-    <p> Veniam incididunt magna aliqua excepteur eiusmod ad eiusmod in. Qui in commodo do duis do veniam reprehenderit nulla Lorem dolore voluptate sit. Nulla ut culpa ipsum velit culpa culpa aliquip consequat cillum laboris. In proident veniam deserunt ad laboris consectetur est sit magna aliqua ex laborum. Fugiat sunt laborum ex nisi aliquip duis qui magna sint et. Pariatur eiusmod adipisicing irure elit aliqua id proident ex proident et.Mollit consectetur ad sint nulla aliqua exercitation do cillum aliquip sit amet ea. Exercitation ea labore ea occaecat proident enim sit veniam. Quis est occaecat quis quis fugiat reprehenderit ad sunt cupidatat.
-
-Mollit ut cupidatat ipsum reprehenderit cupidatat magna et elit non sunt qui. Proident sint dolore enim enim ipsum nulla. Excepteur ullamco pariatur adipisicing minim irure veniam sunt dolore reprehenderit nisi. Aliqua id Lorem ipsum ad nostrud anim ex aute. Id cillum ad fugiat proident amet non. Exercitation id amet nulla aliquip.</p>
-
-
-</section>
-
-
-<section class="connected">
-            <div class="elConnection"> <img src="./images/app_mockup.jpg"</div>
-                <div class="elHeader"> <h1>Heading big</h1> <br/> <h3> Heading small</h3></div>
-                <p> Veniam incididunt magna aliqua excepteur eiusmod ad eiusmod in. Qui in commodo do duis do veniam reprehenderit nulla Lorem dolore voluptate sit. Nulla ut culpa ipsum velit culpa culpa aliquip consequat cillum laboris. In proident veniam deserunt ad laboris consectetur est sit magna aliqua ex laborum. Fugiat sunt laborum ex nisi aliquip duis qui magna sint et. Pariatur eiusmod adipisicing irure elit aliqua id proident ex proident et.
-            
-            Esse non minim occaecat ex consequat cillum amet ipsum laboris officia. Ut pariatur sit eiusmod deserunt sint id quis laborum nulla reprehenderit dolore elit dolor. Cupidatat nostrud esse consequat amet duis fugiat ipsum dolor laborum irure laborum dolore officia dolor. Commodo et adipisicing pariatur ad. Magna cupidatat eu consectetur excepteur sint cupidatat consequat veniam nisi fugiat. Sint ea ut exercitation ullamco deserunt minim sunt. </p>
-            
-            <div class="appPres"><img src="./images/appPres.png"</div>
-</section>
-
-
-<section class="safetyPres"> 
-    <div class="safetyHeader">Safety</div>
-    <div class="safetyFlexContainer1">
-        <img src="./images/insulation_placeholder2.jpg">
-        <h1>there can never be too much insulation...</h1>
-    </div>
-    <div class="safetyFlexContainer2">
-        <h1>and don't hesitate to throw it in the washer</h1>
-        <img src="./images/washer.jpg">
-    </div>
-</section>
-
-
-<section class="manualControls">
-    <div class="controlHeader">And don't forget, you can always go full manual!</div>
-    <div class="controlsFlexContainer">
-    
-    <p>In eiusmod reprehenderit magna amet cupidatat aliquip magna exercitation esse laboris. Proident laborum eiusmod tempor proident laboris reprehenderit veniam et laborum labore labore elit officia proident. Ut incididunt enim ullamco duis consequat ex officia velit enim quis pariatur anim quis ut. Sint officia adipisicing anim dolor eiusmod cillum eiusmod.
-
-Esse pariatur do est irure voluptate enim cupidatat. Deserunt sint ad velit mollit labore pariatur elit id. Deserunt laborum labore aute nostrud ea magna exercitation dolor labore. Velit nulla ut anim aliquip mollit dolore ipsum nulla aliqua fugiat occaecat exercitation mollit tempor. Officia amet nostrud exercitation commodo aliqua quis. Enim exercitation aute eu magna laboris laborum cupidatat sint incididunt adipisicing.
-
-Nulla laboris sit ea irure pariatur deserunt laboris commodo sint non elit proident. Et ad exercitation eiusmod veniam id labore exercitation commodo ullamco amet. Laborum velit reprehenderit sint Lorem minim nisi laborum excepteur. Nisi excepteur adipisicing proident excepteur sit magna magna commodo laboris anim.</p>
-
-    <img src="./images/switch.jpg">
-</div>
-
-</section>
-
-<!-- end of main part of technology-->
-
-
-
-
- 
-    <section class="footerContainer">
-        <footer class="mainFooter">
-            <div class="footerBranding"><img src="images/CLOTHEX.png" /> <br /> The exciting future of clothing</div>
-            <div class="footerNav">
-                <ul>
-                    <li> <a href="index.html"> home</a> <hr /></li>
-                    <li><a href="index.html">all products</a> <hr /></li>
-                    <li><a href="index.html">technology</a><hr /></li>
-                    <li><a href="index.html">about us</a><hr /></li>
-                    <li><a href="index.html">contact</a><hr /></li>
-                </ul>
-            </div>
-            <div class="footerFollowUs">
-                <div class="followUsText">Follow us on social media</div>
-                <div class="followUsButtons">
-                    <div class="followUsTwitter"><a href="twitter.com"><img src="images/twitter.png" /></a></div>
-                    <div class="followUsInsta"><a href="instagram.com"><img src="images/insta.png" /></a></div>
-                    <div class="followUsYoutube"><a href="youtube.com"><img src="images/youtube.png" /></a></div>
-                    <div class="followUsFacebook"><a href="facebook.com"><img src="images/facebook.png" /></a></div>
-                </div>
-            </div>
-        </footer>
+    <section class="techPres">
+      <div class="techHeadText">Innovation in it's core</div>
+      <div class="techBotText">
+        <p>
+          Lorem ipsum dolor sit aadipisicing elit. Molestias voluptate culpa
+          dicta quod odio quas! Dolorem odit quidem in explicabo quae
+          voluptatibus, perspiciatis consectetur? Neque vel repellat maiores
+          distinctio est. >Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Suscipit earum laboriosam, corporis minus animi soluta debitis,
+          omnis natus quaerat dignissimos quasi harum maiores labore totam
+          repellendus sunt sint modi facere! Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Odit at ratione dolor nihil cum,
+          nesciunt consequuntur officiis exercitationem facilis vel provident
+          voluptatem, eos similique nemo placeat ipsam, tempora hic neque!
+        </p>
+      </div>
     </section>
 
-</body>
+    <section class="techHeatingEl">
+      <div class="techFlexContainer">
+        <div class="elAnimation">
+          <img src="./images/insulation_placeholder.jpg" />
+        </div>
+        <div class="elHeader">
+          <h1>Heating element</h1>
+          <br />
+          <h3>some cool extra text about it</h3>
+        </div>
+      </div>
+      <p>
+        Veniam incididunt magna aliqua excepteur eiusmod ad eiusmod in. Qui in
+        commodo do duis do veniam reprehenderit nulla Lorem dolore voluptate
+        sit. Nulla ut culpa ipsum velit culpa culpa aliquip consequat cillum
+        laboris. In proident veniam deserunt ad laboris consectetur est sit
+        magna aliqua ex laborum. Fugiat sunt laborum ex nisi aliquip duis qui
+        magna sint et. Pariatur eiusmod adipisicing irure elit aliqua id
+        proident ex proident et. Esse non minim occaecat ex consequat cillum
+        amet ipsum laboris officia. Ut pariatur sit eiusmod deserunt sint id
+        quis laborum nulla reprehenderit dolore elit dolor. Cupidatat nostrud
+        esse consequat amet duis fugiat ipsum dolor laborum irure laborum dolore
+        officia dolor. Commodo et adipisicing pariatur ad. Magna cupidatat eu
+        consectetur excepteur sint cupidatat consequat veniam nisi fugiat. Sint
+        ea ut exercitation ullamco deserunt minim sunt.
+      </p>
+    </section>
+
+    <section class="battery">
+      <div class="bannerFW"><img src="./images/powerbanner.jpg"</div>
+      <p>
+        Sunt sint incididunt velit sunt sit duis. Minim in elit minim dolore
+        nisi labore nisi elit. Ut occaecat veniam mollit non Lorem fugiat
+        consectetur ullamco quis ullamco incididunt veniam non. Veniam ut
+        officia officia fugiat deserunt irure veniam aliqua irure proident eu
+        irure et. Officia non dolor tempor laboris et nisi ipsum enim ullamco
+        minim tempor occaecat esse officia. Magna occaecat irure deserunt sunt
+        cupidatat qui cupidatat est qui velit commodo. Magna proident laboris
+        voluptate amet et duis incididunt officia nulla veniam aliqua aute
+        laboris ex. Quis veniam reprehenderit culpa irure dolor magna tempor
+        deserunt ut sunt. Qui elit voluptate aliquip enim cupidatat nisi dolore
+        excepteur nostrud. Ea minim commodo eiusmod aliquip id excepteur
+        adipisicing. Adipisicing non nisi et culpa exercitation irure irure aute
+        ad. Tempor et sit id dolor consectetur labore occaecat excepteur. Anim
+        mollit irure qui aliqua quis non. Dolore ad labore irure elit incididunt
+        tempor laboris eiusmod adipisicing irure sint.
+      </p>
+    </section>
+
+    <section class="materials">
+      <div class="techFlexContainer">
+        <div class="elHeader">
+          <h1>Something about the fabric</h1>
+          <br />
+          <h3>and some more cool text about it</h3>
+        </div>
+        <div class="elAnimation">
+          <img src="./images/fabric_placeholder.jpg" />
+        </div>
+      </div>
+      <p>
+        Veniam incididunt magna aliqua excepteur eiusmod ad eiusmod in. Qui in
+        commodo do duis do veniam reprehenderit nulla Lorem dolore voluptate
+        sit. Nulla ut culpa ipsum velit culpa culpa aliquip consequat cillum
+        laboris. In proident veniam deserunt ad laboris consectetur est sit
+        magna aliqua ex laborum. Fugiat sunt laborum ex nisi aliquip duis qui
+        magna sint et. Pariatur eiusmod adipisicing irure elit aliqua id
+        proident ex proident et.Mollit consectetur ad sint nulla aliqua
+        exercitation do cillum aliquip sit amet ea. Exercitation ea labore ea
+        occaecat proident enim sit veniam. Quis est occaecat quis quis fugiat
+        reprehenderit ad sunt cupidatat. Mollit ut cupidatat ipsum reprehenderit
+        cupidatat magna et elit non sunt qui. Proident sint dolore enim enim
+        ipsum nulla. Excepteur ullamco pariatur adipisicing minim irure veniam
+        sunt dolore reprehenderit nisi. Aliqua id Lorem ipsum ad nostrud anim ex
+        aute. Id cillum ad fugiat proident amet non. Exercitation id amet nulla
+        aliquip.
+      </p>
+    </section>
+
+    <section class="connected">
+      <div class="elConnection"><img src="./images/app_mockup.jpg"</div>
+      <div class="elHeader">
+        <h1>Always stay commected</h1>
+        <br />
+        <h3>some cool text about the app</h3>
+      </div>
+      <p>
+        Veniam incididunt magna aliqua excepteur eiusmod ad eiusmod in. Qui in
+        commodo do duis do veniam reprehenderit nulla Lorem dolore voluptate
+        sit. Nulla ut culpa ipsum velit culpa culpa aliquip consequat cillum
+        laboris. In proident veniam deserunt ad laboris consectetur est sit
+        magna aliqua ex laborum. Fugiat sunt laborum ex nisi aliquip duis qui
+        magna sint et. Pariatur eiusmod adipisicing irure elit aliqua id
+        proident ex proident et. Esse non minim occaecat ex consequat cillum
+        amet ipsum laboris officia. Ut pariatur sit eiusmod deserunt sint id
+        quis laborum nulla reprehenderit dolore elit dolor. Cupidatat nostrud
+        esse consequat amet duis fugiat ipsum dolor laborum irure laborum dolore
+        officia dolor. Commodo et adipisicing pariatur ad. Magna cupidatat eu
+        consectetur excepteur sint cupidatat consequat veniam nisi fugiat. Sint
+        ea ut exercitation ullamco deserunt minim sunt.
+      </p>
+
+      <div class="appPres"><img src="./images/appPres.png"</div>
+    </section>
+
+    <section class="safetyPres">
+      <div class="safetyHeader">Safety</div>
+
+      <div class="gridRow1">
+        <div class="gridBox1">
+          <img src="./images/insulation_placeholder2.jpg" />
+        </div>
+        <div class="gridBox1">
+          <h1>there can never be too much insulation...</h1>
+        </div>
+      </div>
+      <div class="gridRow1">
+        <div class="gridBox1">
+          <h1>and don't hesitate to throw it in the washer</h1>
+        </div>
+        <div class="gridBox1"><img src="./images/washer.jpg" /></div>
+      </div>
+    </section>
+
+    <section class="manualControls">
+      <div class="controlHeader">
+        And don't forget, you can always go full manual!
+      </div>
+      <div class="controlsFlexContainer">
+        <p>
+          In eiusmod reprehenderit magna amet cupidatat aliquip magna
+          exercitation esse laboris. Proident laborum eiusmod tempor proident
+          laboris reprehenderit veniam et laborum labore labore elit officia
+          proident. Ut incididunt enim ullamco duis consequat ex officia velit
+          enim quis pariatur anim quis ut. Sint officia adipisicing anim dolor
+          eiusmod cillum eiusmod. Esse pariatur do est irure voluptate enim
+          cupidatat. Deserunt sint ad velit mollit labore pariatur elit id.
+          Deserunt laborum labore aute nostrud ea magna exercitation dolor
+          labore. Velit nulla ut anim aliquip mollit dolore ipsum nulla aliqua
+          fugiat occaecat exercitation mollit tempor. Officia amet nostrud
+          exercitation commodo aliqua quis. Enim exercitation aute eu magna
+          laboris laborum cupidatat sint incididunt adipisicing. Nulla laboris
+          sit ea irure pariatur deserunt laboris commodo sint non elit proident.
+          Et ad exercitation eiusmod veniam id labore exercitation commodo
+          ullamco amet. Laborum velit reprehenderit sint Lorem minim nisi
+          laborum excepteur. Nisi excepteur adipisicing proident excepteur sit
+          magna magna commodo laboris anim.
+        </p>
+
+        <img src="./images/switch.jpg" />
+      </div>
+    </section>
+
+    <!-- end of main part of technology-->
+
+    <section class="footerContainer">
+      <footer class="mainFooter">
+        <div class="footerBranding">
+          <img src="images/CLOTHEX.png" /> <br />
+          The exciting future of clothing
+        </div>
+        <div class="footerNav">
+          <ul>
+            <li>
+              <a href="index.html"> home</a>
+              <hr />
+            </li>
+            <li>
+              <a href="index.html">all products</a>
+              <hr />
+            </li>
+            <li>
+              <a href="index.html">technology</a>
+              <hr />
+            </li>
+            <li>
+              <a href="index.html">about us</a>
+              <hr />
+            </li>
+            <li>
+              <a href="index.html">contact</a>
+              <hr />
+            </li>
+          </ul>
+        </div>
+        <div class="footerFollowUs">
+          <div class="followUsText">Follow us on social media</div>
+          <div class="followUsButtons">
+            <div class="followUsTwitter">
+              <a href="twitter.com"><img src="images/twitter.png"/></a>
+            </div>
+            <div class="followUsInsta">
+              <a href="instagram.com"><img src="images/insta.png"/></a>
+            </div>
+            <div class="followUsYoutube">
+              <a href="youtube.com"><img src="images/youtube.png"/></a>
+            </div>
+            <div class="followUsFacebook">
+              <a href="facebook.com"><img src="images/facebook.png"/></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
 </html>

@@ -223,8 +223,9 @@ a {
   width: 80%;
   margin: auto;
   margin-top: 5em;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax( 500px, 1fr));
+  grid-gap: 6em;
 }
 
 .elAnimation img {
@@ -301,25 +302,25 @@ a {
   text-align: center;
 }
 
-.safetyPres .safetyFlexContainer1,
-.safetyFlexContainer2 {
-  display: flex;
-  justify-content: space-around;
-  margin: auto;
-  margin-top: 4em;
-  width: 80%;
+.safetyPres .gridRow1{
+  display: grid;
+  grid-template-columns:  repeat(auto-fill, minmax( 600px, 1fr));
+  place-content: center;
+  margin: 4em 10em;
 }
+
 
 .safetyPres h1 {
   font-size: 3em;
-  padding: 2em;
   font-weight: 600;
+
 }
 .safetyPres img {
   border-radius: 20px;
   -webkit-box-shadow: 12px 12px 24px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 12px 12px 24px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 12px 12px 24px 0px rgba(0, 0, 0, 0.2);
+
 }
 
 .manualControls {
@@ -338,13 +339,15 @@ a {
   width: 80%;
   padding-right: 2em;
 }
-.controlsFlexContainer,
-.controlHeader {
+.controlsFlexContainer {
   width: 80%;
   margin: auto;
   margin-top: 2.5em;
   display: flex;
-}
+  justify-content: space-around;
+  flex-flow: row wrap;
+  }
+
 .manualControls img {
   border-radius: 20px;
   -webkit-box-shadow: 12px 12px 24px 0px rgba(0, 0, 0, 0.2);
