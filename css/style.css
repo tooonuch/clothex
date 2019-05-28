@@ -306,9 +306,19 @@ a {
   display: grid;
   grid-template-columns:  repeat(auto-fill, minmax( 600px, 1fr));
   place-content: center;
-  margin: 4em 10em;
+  width: 80%;
+  margin: auto;
+  margin-top: 4em;
+  align-items: center;
 }
 
+.gridBox2{
+  place-self: end;
+}
+.textRight h1{
+  justify-self: end;
+  text-align: end;
+}
 
 .safetyPres h1 {
   font-size: 3em;
