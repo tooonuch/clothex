@@ -27,6 +27,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   </head>
   <body id="contact">
+      <header id="underlay">
+          <img src="images/Group4.png" class="logo invert" />
+          <img src="images/menu.svg" class="menu-btn invert" id="open-menu" />
+        </header>
+    
+        <script>
+          $(document).ready(function() {
+            var overlay = document.getElementById("overlay");
+            var closeMenu = document.getElementById("close-menu");
+    
+            document
+              .getElementById("open-menu")
+              .addEventListener("click", function() {
+                overlay.classList.add("show-menu");
+              });
+            document
+              .getElementById("close-menu")
+              .addEventListener("click", function() {
+                overlay.classList.remove("show-menu");
+              });
+    
+            $(window).scroll(function() {
+              var scroll = $(window).scrollTop();
+              if (scroll > 100) {
+                $("#underlay").css("background", "black");
+                $(".invert").css("filter", "invert(100%)");
+              } else {
+                $("#underlay").css("background", "transparent");
+                $(".invert").css("filter", "invert(0%)");
+              }
+            });
+          });
+        </script>
+    
+        <nav id="overlay">
+          <img src="./images/close.svg" class="close-btn" id="close-menu" />
+    
+          <ul>
+            <li>
+              <a href="index.html">home</a>
+              <span> main page </span>
+            </li>
+            <li>
+              <a href="all.html">all products</a>
+              <span> see our other stuff </span>
+            </li>
+            <li>
+              <a href="tech.html">technology</a>
+              <span> how we make it work </span>
+            </li>
+            <li>
+              <a href="about.html">about us</a>
+              <span> who we are</span>
+            </li>
+            <li>
+              <a href="contact.html">contact us</a>
+              <span> get in touch </span>
+            </li>
+          </ul>
+        </nav>
+
    <div class="gridContainerContact">
       <div class="gridBox1"><a href="twitter.com">twitter</a><hr></div>
       <div class="gridBox1"><a href="instagram.com">instagram</a><hr></div>
