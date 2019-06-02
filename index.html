@@ -35,8 +35,8 @@
  
     </section>
     <header id="underlay">
-            <img src="images/Group4.png" class="logo invert" />
-            <img src="images/menu.svg" class="menu-btn invert" id="open-menu">
+            <img src="images/Group4.png" class="logo" />
+            <img src="images/menu.svg" class="menu-btn" id="open-menu">
         </header>
 
 <script>
@@ -57,11 +57,13 @@
         var scroll = $(window).scrollTop();
         if(scroll>100){
             $("#underlay").css("background", "black");
-            $(".invert").css("filter", "invert(100%)");
+            $(".logo").addClass('invert');
+            $(".menu-btn").addClass('invert');
         }
         else{
             $("#underlay").css("background", "transparent");
-            $(".invert").css("filter", "invert(0%)");
+            $(".invert").removeClass('invert');
+            $(".menu-btn").removeClass('invert');
         }
     });
 

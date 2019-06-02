@@ -1,0 +1,195 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+    />
+    <title>CLOTHEX|Smart Clothing Brand</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+  </head>
+
+  <body id="all">
+    <header id="underlay">
+      <img src="images/Group4.png" class="logo" />
+      <img src="images/menu.svg" class="menu-btn invert" id="open-menu" />
+    </header>
+
+    <script>
+      $(document).ready(function() {
+        var overlay = document.getElementById("overlay");
+        var closeMenu = document.getElementById("close-menu");
+
+        document
+          .getElementById("open-menu")
+          .addEventListener("click", function() {
+            overlay.classList.add("show-menu");
+          });
+        document
+          .getElementById("close-menu")
+          .addEventListener("click", function() {
+            overlay.classList.remove("show-menu");
+          });
+
+        $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
+          if (scroll > 100) {
+            $("#underlay").css("background", "black");
+            $(".invert").css("filter", "invert(100%)");
+          } else {
+            $("#underlay").css("background", "transparent");
+            $(".invert").css("filter", "invert(0%)");
+          }
+        });
+      });
+    </script>
+
+    <nav id="overlay">
+      <img src="./images/close.svg" class="close-btn" id="close-menu" />
+
+      <ul>
+        <li>
+          <a href="index.html">home</a>
+          <span> main page </span>
+        </li>
+        <li>
+          <a href="all.html">all products</a>
+          <span> see our other stuff </span>
+        </li>
+        <li>
+          <a href="tech.html">technology</a>
+          <span> how we make it work </span>
+        </li>
+        <li>
+          <a href="about.html">about us</a>
+          <span> who we are</span>
+        </li>
+        <li>
+          <a href="contact.html">contact us</a>
+          <span> get in touch </span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="splitScreen">
+      <div class="splitScreenLeft">
+        <img src="./images/11.png" />
+        <button class="toggleFullScreenLeft">Male</button>
+      </div>
+      <div class="splitScreenRight">
+        <img src="./images/66.png" />
+        <button class="toggleFullScreenRight">Female</button>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        $(".toggleFullScreenRight").click(function() {
+          $(".splitScreenLeftExpanded").css("display", "initial");
+          $(".malePres").addClass("animated forwards slideInRight");
+          $(".splitScreen").css("display", "none");
+          $("#all").css("background", "#141414");
+          $(".logo").addClass("invert");
+        });
+        $(".toggleFullScreenLeft").click(function() {
+          $(".splitScreenRightExpanded").css("display", "initial");
+          $(".femalePres").addClass("animated forwards slideInLeft");
+          $(".splitScreenRightExpanded").css("margin", "auto");
+          $(".splitScreen").css("display", "none");
+          $("#all").css("background", "#fff");
+        });
+      });
+    </script>
+
+    <section class="expanded">
+      <div class="splitScreenLeftExpanded">
+        <div class="malePres">
+          <div><img src="./images/11.png" /></div>
+          <div><img src="./images/11.png" /></div>
+          <div><img src="./images/11.png" /></div>
+        </div>
+        <a href="kikstarter.com" class="ctaButt">Where to buy</a>
+
+      </div>
+
+      <div class="splitScreenRightExpanded">
+        <div class="femalePres">
+          <div><img src="./images/11.png" /></div>
+          <div><img src="./images/11.png" /></div>
+          <div><img src="./images/11.png" /></div>
+        </div>
+        <a href="kikstarter.com" class="ctaButt">Where to buy</a>
+      </div>
+    </section>
+    <section class="footerContainer">
+      <footer class="mainFooter">
+        <div class="footerBranding">
+          <img src="images/CLOTHEX.png" /> <br />
+          The exciting future of clothing
+        </div>
+        <div class="footerNav">
+          <ul>
+            <li>
+              <a href="index.html"> home</a>
+              <hr />
+            </li>
+            <li>
+              <a href="all.html">all products</a>
+              <hr />
+            </li>
+            <li>
+              <a href="tech.html">technology</a>
+              <hr />
+            </li>
+            <li>
+              <a href="about.html">about us</a>
+              <hr />
+            </li>
+            <li>
+              <a href="contact.html">contact</a>
+              <hr />
+            </li>
+          </ul>
+        </div>
+        <div class="footerFollowUs">
+          <div class="followUsText">Follow us on social media</div>
+          <div class="followUsButtons">
+            <div class="followUsTwitter">
+              <a href="twitter.com"><img src="images/twitter.png"/></a>
+            </div>
+            <div class="followUsInsta">
+              <a href="instagram.com"><img src="images/insta.png"/></a>
+            </div>
+            <div class="followUsYoutube">
+              <a href="youtube.com"><img src="images/youtube.png"/></a>
+            </div>
+            <div class="followUsFacebook">
+              <a href="facebook.com"><img src="images/facebook.png"/></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
